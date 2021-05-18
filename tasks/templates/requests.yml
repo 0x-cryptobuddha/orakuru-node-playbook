@@ -1,0 +1,11 @@
+# Timeout is Go-style time.Duration for HTTP calls.
+# Valid time units: ns (nanoseconds), us (or µs, microseconds), ms (milliseconds), s (seconds), m (minutes), h (hours)
+timeout: "5s"
+# Filter contains a blacklist/whitelist domain filter
+filter:
+  # Can be either whitelist or blacklist
+  mode: blacklist
+  # Domains contains a list of domains, that will be either allowed or disallowed
+  domains:
+  - "localhost"
+  
