@@ -1,7 +1,7 @@
 # Contains URL of a Web3 endpoint.
 # HAS TO BE A WEBSOCKET ENDPOINT!!!
-url: "https://bsc-dataseed.binance.org/"
+url: {{ lookup('env','BSC_URL') }}
 # Private key contains hex-encoded wallet private key without 0x at the start
-private_key: "key-here"
+private_key: {{ lookup('env','PRIVATE_KEY') }}
 # Orakuru core contains address of a core contract. This will be filled with an actual address on release
-orakuru_core: "core-address-here"
+orakuru_core: {{ lookup('env','ORAKURU_CORE_ADDRESS') }}
