@@ -10,7 +10,7 @@ Install the dependencies and run the playbook.
 Set the ENV Variables
 ```sh
 export BSC_URL="https://bsc-dataseed.binance.org/" # replace with your url
-export PRIVATE_KEY="key-here"
+export PRIVATE_KEY="key-hereX"
 export ORAKURU_CORE_ADDRESS="core-address-here"
 ```
 Now Install the lib dependencies
@@ -25,4 +25,13 @@ Run the playbook
 git clone https://github.com/0x-cryptobuddha/orakuru-node-playbook.git
 cd orakuru-node-playbook
 ansible-playbook tasks/main.yml -vvv --extra-vars "node_name=your_node_name"
+```
+Checking the status of node
+```sh
+supervisorctl status
+```
+Checking the logs
+
+```sh
+tail -f /var/log/orakuru-node.out.log
 ```
