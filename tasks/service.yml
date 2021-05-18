@@ -1,0 +1,30 @@
+- name: "include var"
+  include_vars: ../defaults/main.yml
+
+- name: "start supervisor"
+  command: "service supervisor start"
+
+- name: "web3 config"
+  template:
+    src: web3.yml
+    dest: "{{home_dir}}/{{source_dir}}/node/conf/web3.yml"
+
+- name: "request config"
+  template:
+    src: requests.yml
+    dest: "{{home_dir}}/{{source_dir}}/node/conf/requests.yml"
+
+
+- name: "supervisor config"
+  template:
+    src: node.conf
+    dest: /etc/supervisor/conf.d/orakuru-node.conf
+
+- name: "reread supervisor config"
+  command: "supervisorctl reread"
+
+- name: "update the supervisor config"
+  command: "supervisorctl update"
+
+- name: "start Orakuru node"
+  command: "supervisorctl start all"
