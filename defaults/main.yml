@@ -1,0 +1,14 @@
+---
+home_dir: /opt
+source_dir: orakuru
+
+# Either override name here, or pass dynamically.
+node_name: xyz
+git_repo: https://github.com/orakurudata/crystal-ball.git
+
+
+
+MONITORING_HOST: localhost:9000
+CB_CONFIG_DIR: /opt/orakuru/node/conf
+CB_LOG_LEVEL: trace
+CB_PRETTY_LOG: true

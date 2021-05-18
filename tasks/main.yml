@@ -1,0 +1,13 @@
+- hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: "Init dependencies"
+      include_tasks: init.yml
+
+    - name: "Download & Install Orakuru node"
+      include_tasks: go.yml
+    - name: "ork node"
+      include_tasks: ork.yml
+    - name: "ork node"
+      include_tasks: service.yml
