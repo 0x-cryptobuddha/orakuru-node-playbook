@@ -1,0 +1,22 @@
+---
+- name: "include var"
+  include_vars: ../defaults/main.yml
+
+- name: "Update apt cache"
+  apt:
+    update_cache: yes
+    cache_valid_time: 600
+
+- name: "Install dependencies"
+  apt:
+    name:
+      - git
+      - gcc
+      - g++
+      - wget
+      - curl
+      - supervisor
+    state: present
+
+- name: "Create directories"
+  command: "mkdir -p {{home_dir}}/{{source_dir}}/src {{home_dir}}/{{source_dir}}/node {{home_dir}}/{{source_dir}}/node/conf"
