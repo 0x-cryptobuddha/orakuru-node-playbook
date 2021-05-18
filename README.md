@@ -34,4 +34,5 @@ Checking the logs
 
 ```sh
 tail -f /var/log/orakuru-node.out.log
+
 ```
