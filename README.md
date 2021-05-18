@@ -1,2 +1,2 @@
-# orakuru-node-playbook
-Ansible Playbook to run ORK node.
+# orakuru-node
+Automations for Orakuru Node installation
