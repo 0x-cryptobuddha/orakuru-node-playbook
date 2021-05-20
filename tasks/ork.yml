@@ -5,6 +5,11 @@
   command: "git clone {{git_repo}} ."
   args:
     chdir: "{{home_dir}}/{{source_dir}}/src"
+    
+- name: "checkout the repo"
+  command: "git checkout {{git_tag}} ."
+  args:
+    chdir: "{{home_dir}}/{{source_dir}}/src"
 
 - name: "install dependencies"
   command: "go get ./..."
