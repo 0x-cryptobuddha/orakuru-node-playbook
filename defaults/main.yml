@@ -5,7 +5,7 @@ source_dir: orakuru
 # Either override name here, or pass dynamically.
 node_name: xyz
 git_repo: https://github.com/orakurudata/crystal-ball.git
-git_tag: v0.2.0
+git_tag: v0.2.1
 
 
 
