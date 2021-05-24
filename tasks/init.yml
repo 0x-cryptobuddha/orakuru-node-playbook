@@ -18,4 +18,4 @@
       - supervisor
     state: present
 - name: "Create directories"
-  command: "mkdir -p {{home_dir}}/{{source_dir}}/src {{home_dir}}/{{source_dir}}/node {{home_dir}}/{{source_dir}}/node/conf"
+  command: "mkdir -p {{home_dir}}/{{source_dir}}/src {{home_dir}}/{{source_dir}}/node {{CB_CONFIG_DIR}}"
