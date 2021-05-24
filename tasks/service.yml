@@ -7,12 +7,12 @@
 - name: "web3 config"
   template:
     src: web3.yml
-    dest: "{{home_dir}}/{{source_dir}}/node/conf/web3.yml"
+    dest: "{{CB_CONFIG_DIR}}/web3.yml"
 
 - name: "request config"
   template:
     src: requests.yml
-    dest: "{{home_dir}}/{{source_dir}}/node/conf/requests.yml"
+    dest: "{{CB_CONFIG_DIR}}/requests.yml"
 
 
 - name: "supervisor config"
