@@ -24,7 +24,7 @@ Run the playbook
 ```sh
 git clone https://github.com/0x-cryptobuddha/orakuru-node-playbook.git
 cd orakuru-node-playbook
-ansible-playbook tasks/main.yml -vvv --extra-vars "node_name=your_node_name"
+ansible-playbook tasks/main.yml -vvv --extra-vars "node_name=your_node_name home_dir=ork_dir_location CB_CONFIG_DIR=config_dir"
 ```
 Checking the status of node
 ```sh
