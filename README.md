@@ -43,7 +43,7 @@ Upgrades
 ```sh
 git clone https://github.com/0x-cryptobuddha/orakuru-node-playbook.git
 cd orakuru-node-playbook
-ansible-playbook tasks/build.yml -vvv --extra-vars "build_dir" -vvv
+ansible-playbook tasks/build.yml -vvv --extra-vars "build_dir=/build git_tag=v0.2.3" -vvv
 ```
 After this step do the following
 ```sh
