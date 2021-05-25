@@ -1,0 +1,28 @@
+- name: "include var"
+  include_vars: ../defaults/main.yml
+
+- name: "create build dirs"
+  command: "mkdir -p {{ build_dir }}/src {{ build_dir }}/bin"
+
+- name: "clone the repo"
+  command: "git clone {{git_repo}} ."
+  args:
+    chdir: "{{ build_dir }}/src"
+    
+- name: "checkout the repo"
+  command: "git checkout {{git_tag}} ."
+  args:
+    chdir: "{{ build_dir }}/src"
+
+- name: "install dependencies"
+  command: "go get ./..."
+  args:
+    chdir: "{{ build_dir }}/src"
+
+- name: "create binary"
+  command: "go install ./cmd/crystal-ball"
+  args:
+    chdir: "{{ build_dir }}/src"
+  environment:
+    GOBIN: "{{ build_dir }}/bin"
+

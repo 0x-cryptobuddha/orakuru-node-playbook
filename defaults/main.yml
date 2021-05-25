@@ -1,11 +1,12 @@
 ---
 home_dir: /opt
 source_dir: orakuru
+build_dir: /build
 
 # Either override name here, or pass dynamically.
 node_name: xyz
 git_repo: https://github.com/orakurudata/crystal-ball.git
-git_tag: v0.2.1
+git_tag: v0.2.3
 
 
 

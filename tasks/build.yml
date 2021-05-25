@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: "Install go"
+      include_tasks: go.yml  
+    - name: "Build ork"
+      include_tasks: _build.yml
